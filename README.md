@@ -1,26 +1,12 @@
 # ✈️ Flightory Community Hub
 ### Experience Reports, Troubleshooting & General Help
 
-This repository is a central community knowledge base for everything related to Flightory. We collect and document:
-
-- Experience reports (personal usage, issues, insights)
-- Troubleshooting guides
-- General help and quick guides
-- Links to external resources and community contributions
-
-During our drone project at the **Technical University Hochschule RheinMain**, we worked in a practical course where we built a **Flightory Stallion VTOL** system from the ground up. While assembling the drone and dealing with our own technical challenges, we discovered that the available documentation was often insufficient, inconsistent, or spread across many different platforms. Based on this experience, the idea for this repository was created: a comprehensive, structured, and community-focused documentation hub where knowledge and practical insights can be shared in an organized manner.
+A community knowledge base for everything Flightory — experience reports, troubleshooting guides, tips, and useful resources, built and maintained by students and enthusiasts.
 
 ---
 
-## 🎯 Purpose of This Repository
-
-This repository aims to:
-
-- Document findings from our HSRM project
-- Collect knowledge from the community (Facebook, Discord, personal experience, etc.)
-- Link helpful external resources
-- Archive solutions and workarounds for common issues
-- Serve as a central help hub for students and users
+### 🛠️ Our Story
+During our drone project at the **Technical University Hochschule RheinMain**, we built a **Flightory Stallion VTOL** from the ground up. We quickly found that documentation was often insufficient, inconsistent, or scattered across many platforms. This repository was our answer: a structured, community-focused hub where knowledge and practical insights can be shared in one place.
 
 ---
 
@@ -35,40 +21,7 @@ This repository aims to:
 README.md
 ```
 
----
-
-## 📂 Repository Content
-
-### 🚁 01 – HSRM StallionVTOL: Our Project
-Documentation from our practical course at Hochschule RheinMain:
-
-- Build process and assembly notes
-- Configuration and setup decisions
-- Lessons learned
-
-### 💡 02 – General Tips & Learnings
-Personal or community-based insights on:
-
-- Using Flightory
-- Common problems and errors
-- Tips and best practices
-
-### 🔧 03 – Troubleshooting
-Step-by-step instructions for:
-
-- Frequent technical issues
-- Bugs and workarounds
-- Installation or setup problems
-- Performance issues
-
-### 🌍 04 – Community Projects & Knowledge
-Contributions from YOU, the community:
-
-- personal experience reports
-- Small guides
-- questions
-- answers to existing questions
-- External community findings
+> Each folder has its own README with more detail on what goes inside.
 
 ---
 
@@ -90,7 +43,7 @@ As found in a different GitHub Repo:
 | Official YouTube Channel | [youtube.com/c/FLIGHTORY](https://www.youtube.com/c/FLIGHTORY) |
 | Official Discord | [discord.com/flightory](https://discord.com/channels/1235173288150437929/1277936960970690603) |
 
-### 🎬 Helpful Tutorials found on Youtube
+### 🎬 Helpful Tutorials on YouTube
 
 - [Flightory Talon 1400 Build Tutorial Part 1](https://www.youtube.com/watch?v=U0Qsgw7TUzI)
 - [Flightory Talon 1400 Build Tutorial Part 2](https://www.youtube.com/watch?v=ay6Tz3RohFc)
@@ -142,6 +95,8 @@ Please follow the repository structure and include proper sources.
 
 Browse existing content or add your own report or guide.  
 If something is unclear, feel free to open an issue.
+
+---
 
 ## 📌 Notice
 
