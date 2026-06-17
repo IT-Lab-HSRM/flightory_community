@@ -10,6 +10,7 @@ A reference guide for common terms used in fixed-wing and VTOL drone building, F
 | **Barometer (Baro)** | Measures altitude via air pressure. |
 | **BEC (Battery Eliminator Circuit)** | Supplies power to the flight controller and servos from the battery. |
 | **Brim / Raft** | Extra printed material added around the base of a print to improve bed adhesion. |
+| **CA** | Cyanoacrylate — it's the chemical name for super glue. |
 | **CG (Center of Gravity)** | The balance point of the aircraft — crucial for stable and predictable flight. |
 | **CRSF (Crossfire)** | Protocol used by the TBS Crossfire system. Very fast and low-latency, with telemetry support and extended features. |
 | **Dihedral** | The upward angle of the wings from the center, used to improve passive stability. |
