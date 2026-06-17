@@ -4,6 +4,9 @@ This folder documents our practical course project at the **Technical University
 
 It serves as a transparent record of our process — including what worked, what didn't, and everything we learned along the way.
 
+Documents in this folder are organized across two practical courses (P1 and P2). 
+The prefix in each filename indicates which course it belongs to, making the chronological progression easy to follow.
+
 ---
 
 ## 📂 What You'll Find Here
@@ -20,5 +23,5 @@ It serves as a transparent record of our process — including what worked, what
 All content in this folder is based on personal experience during the HSRM project.
 
 ```
-Source: Personal experience, HSRM drone project 2026
+Source: Personal experience, HSRM drone project 2024/2025
 ```
