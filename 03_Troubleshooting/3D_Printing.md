@@ -1,4 +1,4 @@
-# 3D Printing Reference Guide
+# 3D Printing 
 
 ## Table of Contents
 1. [Filament Choice & Settings](#1-filament-choice--settings)
