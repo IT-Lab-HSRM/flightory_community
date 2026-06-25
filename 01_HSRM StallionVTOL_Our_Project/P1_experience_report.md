@@ -278,4 +278,5 @@ What we took away: hands-on experience across mechanical assembly, electronics i
 
 To everyone at HSRM who supported this project — lecturers, IT lab staff, and fellow students.
 
-*Source: Personal experience, HSRM UAV project, Winter Semester 2024/2025*
+## 📝 Source
+Personal experience, HSRM UAV project, Winter Semester 2024/2025*
