@@ -1,4 +1,4 @@
-# Electronics & Avionics Troubleshooting Guide
+# Electronics & Avionics 
 
 ## Table of Contents
 1. [Flight Controller & ESC](#1-flight-controller--esc)
