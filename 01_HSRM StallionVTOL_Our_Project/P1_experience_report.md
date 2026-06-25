@@ -1,6 +1,7 @@
 # 🚁 Building the Stallion VTOL – Our Experience Report
 
 *O. Alobaid, M. Daoud Agha, C. Diffenhard, O. Weigelt*
+
 *HSRM – Unmanned Aerial Vehicles Module · Winter Semester 2024/2025*
 
 
