@@ -1,11 +1,50 @@
 # Electronics & Avionics Troubleshooting Guide
 
 ## Table of Contents
+0. [General](#0-General)
 1. [Flight Controller & ESC](#1-flight-controller--esc)
 2. [Motors & Servos](#2-motors--servos)
 3. [GPS & Receiver](#3-gps--receiver)
 4. [Power & Battery](#4-power--battery)
 5. [VTX & Camera](#5-vtx--camera)
+
+## 0. General
+
+### No wiring documentation provided by Flightory (hsrm)
+**Problem:** Flightory provides no guidance on wiring the electronics — only a note that there is enough space for them.
+
+**Fix:** Use the individual component manuals (FC, ESC, GPS, receiver) to determine pin assignments. The ArduPilot VTOL wiring documentation is the most complete reference available. Community Discord is useful for specific connector questions.
+
+---
+
+### Almost no connectors are compatible out of the box (hsrm)
+**Problem:** Nearly every connector in the build either didn't match, was missing, or had the wrong pin order. This affected:
+- FC to ESC
+- GPS module connector (JST-SH vs JST-GH mismatch)
+- Motor cables to ESC
+- Battery cables to charger
+
+**Fix:**
+- Have a stock of JST-SH, JST-GH, and XT60 connectors ready
+- Expect to cut, re-pin, and re-solder most connections
+- Cross TX→RX and RX→TX whenever connecting serial devices (GPS, receiver, telemetry)
+- Verify pin order against both component manuals before soldering — "plug and play" rarely means what it implies
+
+---
+
+### Cable channels are too narrow for bundled cables (hsrm)
+**Problem:** The fuselage cable channels are tight. Several cables broke during routing.
+
+**Fix:** Bundle cables with heat-shrink tubing before routing — this protects individual wires and makes the bundle more rigid and manageable. Do not force cables through channels — if resistance is felt, remove and check for a blockage.
+
+---
+
+### Faulty component on delivery — check everything before assembly (hsrm)
+**Problem:** One servo arrived defective and only failed during testing, requiring disassembly and replacement of already-installed parts.
+
+**Tip:** Test all servos, motors, and ESCs on the bench before installation. A servo tester or the FC's output test mode is sufficient — this takes minutes and can save hours of rework.
+
+---
 
 ## 1. Flight Controller & ESC
 
@@ -139,6 +178,13 @@
 
 
 ## 2. Motors & Servos
+
+### Servo destroyed during testing — constrain movement before first test (hsrm)
+**Problem:** During a servo test, a tilt rotor servo moved without input, hit the boom, stripped its gears, and was destroyed within seconds.
+
+**Fix:** Before running any servo test, manually constrain the range of movement — hold the motor mount or temporarily block full travel. In ArduPilot/Mission Planner, set servo min/max limits before sending any test signals. Verify the servo is connected to the correct output channel first.
+
+---
 
 ### What servo can I use instead of the recommended one? (dc)
 **Answer:** Any servo with similar weight and torque rating will work. If the dimensions differ, you may need to modify the mounting bracket. Community-confirmed alternatives for Stallion:
@@ -307,3 +353,4 @@
 ## 📝 Sources
 - (dc) **Discord Group:** [Discord Flightory Group](https://discord.com/channels/1235173288150437929/1277936960970690603) 
 - (fb) **Facebook Group:** [facebook.com/groups/flightory/](https://www.facebook.com/groups/flightory/)
+- (hsrm) **Own personal experience** Made during Wintersemester 24/25 (HochschuleRheinMain)
