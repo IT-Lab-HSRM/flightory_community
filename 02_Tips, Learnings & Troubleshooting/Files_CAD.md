@@ -10,6 +10,11 @@
 
 ---
 
+### STL vs STEP files — modifying parts is harder than expected (hsrm)
+**Problem:** Flightory only provides some parts as editable STEP files. Parts only available as STL require a multi-step conversion to modify in CAD: import as mesh → repair mesh → convert to solid body → manually fix surface irregularities.
+
+**Tip:** If you plan any modifications, identify which parts you need as STEP files early. Contact Flightory directly — they may be able to provide STEP files on request.
+
 ### STEP files not importing into Fusion 360 (dc)
 **Fix:** Use "Insert Component" (not "Import"). This allows importing multiple STEP files into one assembly. Confirmed working with Flightory STEP files.
 
@@ -50,3 +55,4 @@ Most Flightory fuselage and wing parts require at least a **220x220mm** bed. Som
 ## 📝 Sources
 - (dc) **Discord Group:** [Discord Flightory Group](https://discord.com/channels/1235173288150437929/1277936960970690603) 
 - (fb) **Facebook Group:** [facebook.com/groups/flightory/](https://www.facebook.com/groups/flightory/)
+- (hsrm) **Own personal experience** Made during Wintersemester 24/25 (HochschuleRheinMain)
