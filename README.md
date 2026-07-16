@@ -13,10 +13,9 @@ During our drone project at the **Technical University Hochschule RheinMain**, w
 ## 📁 Repository Structure
 
 ```
-/01_HSRM StallionVTOL_Our_Project     ← Our university project documentation
-/02_General Tips & Learnings          ← Tips, best practices, UI/UX insights
-/03_Troubleshooting                   ← Bug fixes, workarounds, setup issues
-/04_Community Projects & Knowledge    ← External contributions & community findings
+/01_HSRM StallionVTOL_Our_Project        ← Our university project documentation
+/02_Tips, Learnings & Troubleshooting    ← Tips, best practices, Bug fixes, workarounds, setup issues
+/03_Community Projects & Knowledge       ← External contributions & community findings
 /assets
 README.md
 ```
