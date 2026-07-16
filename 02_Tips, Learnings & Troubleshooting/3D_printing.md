@@ -228,6 +228,16 @@ Note: you receive STL files, not .3mf — you must slice them yourself, it's not
 
 ## 3. Print Failures & Quality Issues
 
+### 3D printing inaccuracies — expect significant post-processing (hsrm)
+**Problem:** Almost every printed part required manual correction before it would fit. Holes were too tight, channels were blocked, surfaces weren't flush.
+
+**What helped:**
+- Filing, drilling, and cutting after printing is normal — budget time for it
+- CA-glued parts that don't fit correctly are very hard to separate without breaking them — dry-fit everything before gluing
+- Some parts had to be reprinted entirely after failed gluing attempts
+
+
+
 ### Under-extrusion / voids in parts (fb)
 **Causes:** Printing too fast, nozzle temperature too low, partially clogged nozzle, or using foaming settings on pre-foamed filament (or vice versa).
 
@@ -361,3 +371,4 @@ Note: you receive STL files, not .3mf — you must slice them yourself, it's not
 ## 📝 Sources
 - (dc) **Discord Group:** [Discord Flightory Group](https://discord.com/channels/1235173288150437929/1277936960970690603) 
 - (fb) **Facebook Group:** [facebook.com/groups/flightory/](https://www.facebook.com/groups/flightory/)
+- (hsrm) **Own personal experience** Made during Wintersemester 24/25 (HochschuleRheinMain)
