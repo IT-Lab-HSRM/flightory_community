@@ -8,6 +8,34 @@
 
 ## 1. Parts & Fit
 
+### Screw lengths not specified anywhere in the manual (hsrm)
+**Problem:** Flightory's documentation specifies which screw type (M3 etc.) but not the required lengths. There's no reference anywhere in the build guide.
+
+**Fix:** Buy an assortment kit of M3 screws in multiple lengths (available cheaply on Amazon) and test-fit until the right length is obvious. Community recommendation: an M3 mixed-length set covers 95% of the build.
+
+---
+
+### Ball bearings not mentioned until you urgently need them (hsrm)
+**Problem:** The flanged bearings for the tilt motor mounts are not mentioned in the build guide until you are mid-assembly and at the step that requires them.
+
+**Fix:** Order the bearings (3×8×4 mm flanged, ×2) together with everything else at the start. Do not wait until you reach that step.
+
+---
+
+### Build guide is sparse — complex steps have no photos (hsrm)
+**Problem:** Flightory's instructions are brief. Steps like connecting flight controls with hinges, servos, and pushrods are sometimes described in a single sentence with no photos.
+
+**Tip:** Cross-reference with Flightory Discord and Facebook group for community-sourced photos and step-by-step clarifications. YouTube builds of the Stallion also help fill the gaps.
+
+---
+
+### Plan your internal modifications before printing (hsrm)
+**Problem:** Reinforcing struts added inside the fuselage for a custom rail system blocked the carbon tube channels — only discovered after printing. Holes had to be drilled post-print as a workaround.
+
+**Tip:** If modifying the fuselage interior, map out where all carbon tubes, cables, and components need to pass through before modelling the modification. The Flightory STEP files help significantly here.
+
+---
+
 ### Fuselage segments too big for printer bed (dc)
 **Problem:** Fuselage segments won't fit on the printer.
 
@@ -160,3 +188,5 @@
 ## 📝 Sources
 - (dc) **Discord Group:** [Discord Flightory Group](https://discord.com/channels/1235173288150437929/1277936960970690603) 
 - (fb) **Facebook Group:** [facebook.com/groups/flightory/](https://www.facebook.com/groups/flightory/)
+- (hsrm) **Own personal experience** Made during Wintersemester 24/25 (HochschuleRheinMain)
+
