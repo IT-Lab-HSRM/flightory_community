@@ -1,8 +1,23 @@
 # Flight Software
 
 ## Table of Contents
+0. [General](#0-General)
 1. [iNAV](#1-inav)
 2. [ArduPilot](#2-ardupilot)
+
+
+## 0. General 
+
+### RC firmware update — official instructions don't work
+**Problem:** The official GitHub instructions for updating the RC transmitter firmware (EdgeTX) failed.
+
+**Fix:** Use the **Wi-Fi update method** instead — connect the transmitter to your Wi-Fi network and update over the air. This worked when the USB method didn't.
+
+---
+
+### GPS calibration — go outside, away from buildings
+**Tip:** GPS calibration requires an open sky with no buildings or metal structures nearby. Compass calibration is sensitive to electromagnetic interference — move away from electronics, power cables, and metal objects. The university courtyard worked well for this.
+
 
 ## 1. iNAV
 
@@ -49,6 +64,39 @@ The spin in place can also be caused by: wrong tilt motor angles, rear motor not
 
 ## 2. ArduPilot
 
+### FC ships with iNAV — flashing ArduPilot is not straightforward (hsrm) 
+**Problem:** The SpeedyBee F405 Wing (and similar FCs) are sold as "ArduPilot compatible" but ship with iNAV. ArduPilot cannot be flashed directly — you have to go through the iNAV Configurator first. This is not documented anywhere.
+
+**Fix:**
+1. Open iNAV Configurator
+2. Go to Firmware Flasher
+3. Select ArduPlane as the target firmware
+4. Flash from there — not from Mission Planner directly
+
+---
+
+### QuadPlane parameters missing from stable ArduPilot release (hsrm) 
+**Problem:** 11 hours lost because QuadPlane/VTOL parameters simply didn't appear in the stable firmware release. ESCs remained in standby (constant beeping), motor control was impossible. Nothing in the documentation explains this.
+
+**Fix:** If VTOL parameters are missing or motors won't respond despite correct wiring, try the **latest unstable/beta firmware** version. The parameters had been removed from the stable release and were only available in beta at the time. Took minutes to fix once the root cause was known.
+
+> "The parameters had apparently just been removed from the stable release. Not documented anywhere. A day of work lost on something that took minutes to fix once we knew."
+
+---
+
+### Sensor calibration sequence for ArduPilot VTOL (hsrm) 
+Order of operations that worked for the HSRM build:
+1. Flash ArduPlane firmware via iNAV Configurator
+2. Connect via USB-C to Mission Planner
+3. Write all QuadPlane/VTOL parameters
+4. Go outside for GPS lock and compass calibration
+5. Assign and test servo outputs
+6. Flash RC transmitter and receiver firmware (EdgeTX + ELRS)
+7. Bind transmitter and receiver (shared passcode for ELRS)
+8. Test control surfaces — ailerons, V-tail, tilt rotors
+9. Test motors last
+
+---
 
 ### Connecting ELRS/CRSF receiver to Matek F405 Wing V2 with Mission Planner / ArduPilot (fb)
 **Problem:** Radio and receiver are bound but Mission Planner can't connect via MAVLink through a 2.4GHz ELRS receiver.
@@ -94,4 +142,6 @@ The spin in place can also be caused by: wrong tilt motor angles, rear motor not
 ## 📝 Sources
 - (dc) **Discord Group:** [Discord Flightory Group](https://discord.com/channels/1235173288150437929/1277936960970690603) 
 - (fb) **Facebook Group:** [facebook.com/groups/flightory/](https://www.facebook.com/groups/flightory/)
+- (hsrm) **Own personal experience** Made during Wintersemester 24/25 (HochschuleRheinMain)
+
 
