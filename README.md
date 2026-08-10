@@ -13,9 +13,10 @@ During our drone project at the **Technical University Hochschule RheinMain**, w
 ## 📁 Repository Structure
 
 ```
-/01_HSRM StallionVTOL_Our_Project        ← Our university project documentation
-/02_Tips, Learnings & Troubleshooting    ← Tips, best practices, Bug fixes, workarounds, setup issues
-/03_Community Projects & Knowledge       ← External contributions & community findings
+/01_HSRM StallionVTOL_Our_Project     ← Our university project documentation
+/02_General Tips & Learnings          ← Tips, best practices, UI/UX insights
+/03_Troubleshooting                   ← Bug fixes, workarounds, setup issues
+/04_Community Projects & Knowledge    ← External contributions & community findings
 /assets
 README.md
 ```
@@ -46,6 +47,13 @@ As found in a different GitHub Repo:
 
 - [Flightory Talon 1400 Build Tutorial Part 1](https://www.youtube.com/watch?v=U0Qsgw7TUzI)
 - [Flightory Talon 1400 Build Tutorial Part 2](https://www.youtube.com/watch?v=ay6Tz3RohFc)
+- [Stallion VTOL Full Build Playlist](https://www.youtube.com/playlist?list=PL0V78eTdTTFGM4ZsZB-8frSqBhW0S1qe1)
+
+Full Beginners Guide Stallion VTOL: 
+- [Part 1](https://www.youtube.com/watch?v=75mRBMRqSeE&list=PL8VKXobKCFh9J2dTppRWEMae5zzevURrA)
+- [Part 2](https://www.youtube.com/watch?v=D3_zBNBu3qo)
+- [Part 3](https://www.youtube.com/watch?v=thHDy3jc1nU)
+- [iNav Setup Stallion VTOL](https://www.youtube.com/watch?v=B3aNtYs5-dk)
 
 ### 💬 Interesting Reddit Communities
 
