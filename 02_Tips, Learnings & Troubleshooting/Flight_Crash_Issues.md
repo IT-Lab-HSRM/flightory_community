@@ -1,4 +1,4 @@
-# Fixed Wing - Flight & Crash Issues
+# Flight & Crash Issues
 
 ## Table of Contents
 1. [Pre-Flight Safety](#1-Pre-Flight-Safety)
