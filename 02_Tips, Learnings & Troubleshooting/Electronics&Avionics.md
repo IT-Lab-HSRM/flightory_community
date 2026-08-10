@@ -1,4 +1,4 @@
-# Electronics & Avionics Troubleshooting Guide
+# Electronics & Avionics 
 
 ## Table of Contents
 0. [General](#0-General)
@@ -7,6 +7,8 @@
 3. [GPS & Receiver](#3-gps--receiver)
 4. [Power & Battery](#4-power--battery)
 5. [VTX & Camera](#5-vtx--camera)
+6. [Thermal Management](#6-thermal-management)
+7. [Electronics & Wiring](#7-electronics--wiring)
 
 ## 0. General
 
@@ -47,6 +49,24 @@
 ---
 
 ## 1. Flight Controller & ESC
+
+### Motors won't respond despite successful arm in Mission Planner (hsrm)
+**Problem:** Mission Planner shows a successful arm status but motors remain completely silent at all throttle inputs.
+
+**Cause:** No physical arm/disarm switch configured on the transmitter. Mission Planner can show "armed" in software while the transmitter has no channel assigned to trigger arming on the FC.
+
+**Fix:** Configure a dedicated arm/disarm switch on the transmitter and link it to the correct ArduPilot arm function in Mission Planner. Once correctly assigned, set the switch to arm — motors should immediately spin up at idle and respond to throttle input.
+
+> This was the single issue blocking all motor control from the previous semester. It took until this semester to identify and cost significant time.
+
+---
+
+### Pitch and roll axes inverted on first flight (hsrm)
+**Problem:** After first takeoff, pitch and roll inputs produce the opposite of the expected response — pushing forward pitches backward, etc.
+
+**Fix:** In Mission Planner, invert the relevant RC input channels or set the servo output to "reversed" for the affected axes. Check all axes on the ground before flight using the Mission Planner servo output monitor while moving sticks.
+
+---
 
 ### SpeedyBee F405 Wing Mini — bricked after flashing iNAV (fb)
 **Problem:** After flashing iNAV (target SPEEDYBEEF405WING), the FC stopped connecting. SpeedyBee app shows "Failed to Communicate with FC." No COM port or DFU visible in iNAV Configurator.
@@ -275,7 +295,6 @@
 * **Problem:** Radiomaster Nomad TX module gets stuck in power loop when set above 100mW.
 * **Answer:** The JR Bay interface is limited to ~100mW. This is a legacy hardware limitation — not a fault. For higher power levels (250mW, 1W, etc.), an **external battery via XT30** is required. The TX16S battery cover has a pre-marked knockout slot for the power lead.
 
-
 ## 4. Power & Battery
 
 ### 4S battery not enough for Stallion VTOL with 1300KV motors (fb)
@@ -307,6 +326,21 @@
   * Battery to FC/PDB: minimum **12 AWG** for VTOL, 14–16 AWG for non-VTOL
   * Motor to ESC: the wires that come with the ESC (typically 16 AWG) are fine — it's 3-phase and current is spread. 18 AWG is NOT enough for the recommended motors.
   * Reference: https://oscarliang.com/wires-connectors/
+
+---
+
+### Heavy 6S battery shifts CG dangerously forward (hsrm)
+**Problem:** The new 6S 17 Ah battery is significantly heavier than the 4S pack. When mounted in the standard forward battery bay, the CG shifted well beyond the safe forward limit.
+
+**Fix:** Add counterweight at the tail — approximately 350 g was required in this build to bring CG back within range. Alternatively, redesign the battery bay to mount the battery further rearward, or use a lighter 6S option. Always perform a CG test after any significant component change before attempting flight.
+
+---
+
+### 4S battery useful as accessory power source (hsrm)
+**Tip:** Once replaced by the 6S pack for flight, old 4S batteries (XT60 connector) can be repurposed to power FPV goggles and a ground cooling fan. No need to dispose of or store them unused.
+
+---
+
 
 
 ## 5. VTX & Camera
@@ -349,6 +383,61 @@
 **Answer:** 1 mile (~1.5 km) is within the typical real-world range limit of Walksnail with stock antennas. There are many variables: interference, obstacles, antenna orientation. The community notes that losing signal at 1.5 km with stock setup is not unusual.
 
 **Fix for reported crash:** The VTX was set to only 25mW instead of 700mW. Always verify your VTX power level before flying.
+
+## 6. Thermal Management
+
+### Battery and ESCs dangerously hot after extended hover (hsrm)
+**Problem:** After multiple hover flight cycles, battery and ESCs reached temperatures too high to touch safely without protection.
+
+**Cause:** Hover draws sustained high current — far more than forward flight. The 4-in-1 ESC has limited surface area for passive cooling without airflow.
+
+**Fix:**
+- Keep hover phases as short as possible — transition to forward flight quickly
+- Allow cooling time between flights — do not immediately fly again after the battery or ESC is warm
+- Monitor battery temperature as part of post-flight checks
+- Plan active cooling (fan) for ground operation
+
+---
+
+### VTX overheating within minutes on the ground (hsrm)
+**Problem:** Walksnail Avatar VTX reaches ~93°C within minutes during ground operation, triggering an overheat warning in the goggles. No active cooling on the ground means this happens before every flight.
+
+**Fix:**
+- Use a small 5V fan directed at the VTX heatsink during all ground operations — even brief setup time is enough to overheat it without airflow
+- Mount the VTX where it receives maximum airflow in forward flight
+- Old 4S batteries (no longer used for the drone) work perfectly to power the goggles and a cooling fan on the ground without draining the flight battery
+
+
+## 7. Electronics & Wiring
+
+### Modular electronics — recommended approach (hsrm)
+Based on two semesters of experience, the following modularisation setup worked well and is recommended for future builds:
+
+- **Motors:** Bullet connectors — each motor individually disconnectable without soldering
+- **Servos:** Jumper cables to FC — removable without tools
+- **Central electronics box:** FC and ESC in a single removable enclosure — full assembly can be pulled out and reinstalled in minutes
+- **VTX / receiver:** Mount on a removable rail inside the fuselage — not tape
+
+This approach significantly reduces fault-finding time and makes crash repair much faster. The one area that still needs a clean solution is a proper VTX and receiver mount — tape was used as a temporary fix and is not sufficient.
+
+---
+
+### SD card for error logging — essential, not optional (hsrm)
+**Problem:** Two crashes produced no error logs because no SD card was installed in the FC.
+
+**Fix:** Always have an SD card installed in the FC before any flight. In ArduPilot, logging is enabled by default when a card is present. Review logs after every flight — not just after incidents. Logs make root-cause analysis possible and dramatically reduce guesswork.
+
+---
+
+### WiFi connection to Mission Planner (hsrm)
+**Tip:** A WiFi connection between the drone and a ground laptop running Mission Planner allows motor tests, servo trim, PFD monitoring, and flight data to be accessed remotely without a USB cable. Useful for pre-flight checks and post-flight data review. A second operator on the laptop is helpful but not strictly required once the setup is familiar.
+
+---
+
+### Real-time FPV video transmission vs onboard recording (hsrm)
+**Finding:** Real-time video transmission to the goggles worked in flight, but the Walksnail system does not support simultaneous live transmission and recording to an external device. Onboard recording to an SD card in the camera worked reliably and produced usable footage. Plan storage accordingly — bring enough SD cards.
+
+
 
 ## 📝 Sources
 - (dc) **Discord Group:** [Discord Flightory Group](https://discord.com/channels/1235173288150437929/1277936960970690603) 
