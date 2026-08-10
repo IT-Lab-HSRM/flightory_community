@@ -98,6 +98,28 @@ Order of operations that worked for the HSRM build:
 
 ---
 
+### Strong yaw oscillations in hover — drone spins or rocks (hsrm) 
+**Problem:** Significant oscillations around the yaw axis in QStabilize / QHover mode make the aircraft nearly uncontrollable.
+
+**Fix:** Reduce yaw P-gain and feed-forward in the QuadPlane parameter set. Reference:
+- https://ardupilot.org/plane/docs/quadplane-vtol-tuning-process.html
+- https://ardupilot.org/plane/docs/tilt-vectored-yaw-tuning.html
+
+First tuning session significantly reduced oscillations. Second flight (even in windy conditions) showed a clear improvement. Expect 2–3 tuning iterations before hover is clean.
+
+---
+
+### Yaw drifts back when stick is released (hsrm) 
+**Problem:** After a yaw input, releasing the stick causes the aircraft to drift back toward the previous heading rather than holding position.
+
+**Cause:** Yaw integrator or feed-forward not yet tuned correctly for the tilt-vectored yaw system.
+
+**Fix:** Fine-tune the yaw parameter set further — specifically the I-term and feed-forward values. Check that tilt servo mid-points are exactly at 90° — even a few degrees of offset causes persistent yaw bias.
+
+*(Not fully resolved by end of semester — flagged as an open tuning item.)*
+
+ --- 
+
 ### Connecting ELRS/CRSF receiver to Matek F405 Wing V2 with Mission Planner / ArduPilot (fb)
 **Problem:** Radio and receiver are bound but Mission Planner can't connect via MAVLink through a 2.4GHz ELRS receiver.
 
