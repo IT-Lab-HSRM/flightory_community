@@ -8,14 +8,14 @@
 
 ## 0. General 
 
-### RC firmware update — official instructions don't work
+### RC firmware update — official instructions don't work (hsrm)
 **Problem:** The official GitHub instructions for updating the RC transmitter firmware (EdgeTX) failed.
 
 **Fix:** Use the **Wi-Fi update method** instead — connect the transmitter to your Wi-Fi network and update over the air. This worked when the USB method didn't.
 
 ---
 
-### GPS calibration — go outside, away from buildings
+### GPS calibration — go outside, away from buildings (hsrm)
 **Tip:** GPS calibration requires an open sky with no buildings or metal structures nearby. Compass calibration is sensitive to electromagnetic interference — move away from electronics, power cables, and metal objects. The university courtyard worked well for this.
 
 
