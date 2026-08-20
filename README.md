@@ -3,27 +3,19 @@
 
 A community knowledge base for everything Flightory — experience reports, troubleshooting guides, tips, and useful resources, built and maintained by students and enthusiasts.
 
----
-
 ### 🛠️ Our Story
 During our drone project at the **Technical University Hochschule RheinMain**, we built a **Flightory Stallion VTOL** from the ground up. We quickly found that documentation was often insufficient, inconsistent, or scattered across many platforms. This repository was our answer: a structured, community-focused hub where knowledge and practical insights can be shared in one place.
 
----
-
 ## 📁 Repository Structure
 
-```
-/01_HSRM StallionVTOL_Our_Project     ← Our university project documentation
-/02_General Tips & Learnings          ← Tips, best practices, UI/UX insights
-/03_Troubleshooting                   ← Bug fixes, workarounds, setup issues
-/04_Community Projects & Knowledge    ← External contributions & community findings
-/assets
-README.md
-```
+| Folder | Description |
+|---|---|
+| 🎓 [01_HSRM StallionVTOL_Our_Project](./01_HSRM%20StallionVTOL_Our_Project) | Our university project documentation following the build of a Stallion VTOL |
+| 💡 [02_Tips, Learnings & Troubleshooting](./02_Tips,%20Learnings%20%26%20Troubleshooting) | Tips, best practices, Bug fixes, workarounds, issues |
+| 🌐 [03_Community Projects & Knowledge](./03_Community%20Projects%20%26%20Knowledge) | External contributions & community findings |
 
 > Each folder has its own README with more detail on what goes inside.
 
----
 
 ## 🔗 External Resources
 
@@ -64,11 +56,20 @@ Full Beginners Guide Stallion VTOL:
 ### 🐙 Interesting GitHub Repos
 - [/awesome-drone-engineers](https://github.com/brandonhimpfen/awesome-drone-engineers)
 
----
+
+## 🤝 Who Can Contribute?
+
+Everybody is welcome to contribute! 😊
+
+Your Questions, Answers and personal experience can be shared via: 
+- Issues
+- Pull Requests
+
+For more info see [03_Community Projects & Knowledge](./03_Community%20Projects%20%26%20Knowledge)
 
 ## 📝 Source Attribution
 
-Each contribution must include a clear source reference.
+Each contribution must include a source reference. This can be helpful to get the content correct. 
 
 **Format:**
 ```
@@ -78,32 +79,11 @@ Post/Date (if available)
 
 **Examples:**
 ```
-Source: Personal experience, tested on 2026-03-12
-Source: Discord, User XY, post from 2026-03-05
-Source: Facebook Group "Flightory Community", link: …
+Source: Personal experience, tested on ...
+Source: Discord, link ...
+Source: Facebook Group "Flightory Community", link: ...
 ```
 
----
-
-## 🤝 Who Can Contribute?
-
-Although this repository is part of our HSRM project, contributions, questions and answers are very welcome:
-
-- Issues
-- Pull Requests
-- Additional experience reports
-- Corrections and improvements
-
-Please follow the repository structure and include proper sources.
-
----
-
-## 🚀 Get Started
-
-Browse existing content or add your own report or guide.  
-If something is unclear, feel free to open an issue.
-
----
 
 ## 📌 Notice
 
