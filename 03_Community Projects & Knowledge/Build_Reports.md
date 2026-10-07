@@ -4,9 +4,10 @@ This section collects build reports and project experiences found online. They p
 
 The reports are intended as a reference and source of inspiration. Since they are based on individual experiences and different equipment, setups, and circumstances, not every recommendation will apply to every build.
 
-## 💬 Forum Build Reports
+## 💬 Forum/ Blog Build Reports
 
 * [Spitfire76's Build Log – Flightory Stallion VTOL](https://forum.flitetest.com/index.php?threads/spitfire76s-build-log-of-flightorys-vtol-stallion.75671/)
+* [How to Build a 3D Printed Fixed-Wing UAV? | Talon 1400 Build](https://topdronesinfo.com/how-to-build-a-3d-printed-fixed-wing-uav-talon-1400-build/)
 
 ## 🎬 Video Build Reports & Tutorials
 
@@ -25,6 +26,10 @@ The reports are intended as a reference and source of inspiration. Since they ar
 * [Part 2](https://www.youtube.com/watch?v=D3_zBNBu3qo)
 * [Part 3 – Final Assembly & Pre-Flight Checks](https://www.youtube.com/watch?v=thHDy3jc1nU)
 * [iNav Setup – Stallion VTOL](https://www.youtube.com/watch?v=B3aNtYs5-dk)
+
+### Github 
+
+* [Engineering Archive covering multiple Flightory Drone Types](https://github.com/teamcorc/RC-Aircraft-Builds/tree/main/aircraft/flightory)
 
 ## 🌐 Online Build Resources
 
