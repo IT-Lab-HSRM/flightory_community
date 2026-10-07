@@ -7,7 +7,7 @@ It serves as a transparent record of our process — including what worked, what
 Documents in this folder are organized across two practical courses (P1 and P2). 
 The prefix in each filename indicates which course it belongs to, making the chronological progression easy to follow.
 
-Our own troubleshooting tips and learnings are of course incoporated in [02_Tips, Learnings & Troubleshooting](./02_Tips,%20Learnings%20%26%20Troubleshooting)
+Our own troubleshooting tips and learnings are of course incoporated in [02_Tips, Learnings & Troubleshooting](/02_Tips,%20Learnings%20%26%20Troubleshooting)
 
 ## 📂 What You'll Find Here
 
