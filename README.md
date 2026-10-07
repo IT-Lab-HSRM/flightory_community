@@ -6,6 +6,8 @@ A community knowledge base for everything Flightory — experience reports, trou
 ### 🛠️ Our Story
 During our drone project at the **Technical University Hochschule RheinMain**, we built a **Flightory Stallion VTOL** from the ground up. We quickly found that documentation was often insufficient, inconsistent, or scattered across many platforms. This repository was our answer: a structured, community-focused hub where knowledge and practical insights can be shared in one place.
 
+Disclaimer: This is NOT official Flightory Documentation, but Experience gathered from the community <3
+
 ## 📁 Repository Structure
 
 | Folder | Description |
