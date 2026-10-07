@@ -19,7 +19,7 @@ The reports are intended as a reference and source of inspiration. Since they ar
 
 * [Stallion VTOL Full Build Playlist](https://www.youtube.com/playlist?list=PL0V78eTdTTFGM4ZsZB-8frSqBhW0S1qe1)
 
-#### 🛠️ Full Beginner's Guide Flightory Stallion VTOL 
+### 🛠️ Full Beginner's Guide Flightory Stallion VTOL 
 
 * [Part 1 – 3D Printing & Assembly](https://www.youtube.com/watch?v=75mRBMRqSeE)
 * [Part 2](https://www.youtube.com/watch?v=D3_zBNBu3qo)
